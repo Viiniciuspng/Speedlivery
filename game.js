@@ -1,19 +1,19 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-// Função para redimensionar o canvas para a tela inteira
+
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
 
-// Redimensiona o canvas quando a janela for redimensionada
+
 window.addEventListener('resize', resizeCanvas);
 
-// Chama a função para redimensionar o canvas no início
+
 resizeCanvas();
 
-// Imagens
+
 const roadImg = new Image();
 roadImg.src = 'imagens/road.png';
 
@@ -26,7 +26,7 @@ dogImg.src = 'imagens/dog.png';
 const buracoImg = new Image();
 buracoImg.src = 'imagens/buraco.png'; // Certifique-se que este arquivo é diferente de 'dog.png'
 
-// Variáveis de estado
+
 let roadY = 0;
 let roadSpeed = 4;
 let score = 0;
@@ -37,7 +37,7 @@ let gameStarted = false;
 const pistaLimiteEsquerda = 50;
 const pistaLimiteDireita = canvas.width - 90;
 
-// Jogador
+
 const player = {
   x: canvas.width / 2 - 20, // Centraliza o jogador na tela
   y: canvas.height - 120, // Posiciona o jogador na parte inferior
@@ -46,7 +46,7 @@ const player = {
   speed: 12
 };
 
-// Cachorros
+
 let dogs = [];
 let dogSpawnInterval = 160;
 
@@ -82,7 +82,7 @@ function drawDogs() {
   }
 }
 
-// Buracos
+
 let buracos = [];
 let buracoSpawnInterval = 220;
 const buracoStartDelay = 600;
@@ -126,7 +126,7 @@ function checkCollision(rect1, rect2) {
   );
 }
 
-// Controles
+
 document.addEventListener('keydown', (e) => {
   if (e.key === 'p' || e.key === 'P') {
     togglePause();
@@ -155,7 +155,7 @@ canvas.addEventListener('touchmove', (e) => {
   }
 });
 
-// Desenha elementos
+
 function drawRoad() {
   ctx.drawImage(roadImg, 0, roadY, canvas.width, canvas.height);
   ctx.drawImage(roadImg, 0, roadY - canvas.height, canvas.width, canvas.height);
@@ -169,7 +169,7 @@ function drawPlayer() {
   ctx.drawImage(motoImg, player.x, player.y, player.width, player.height);
 }
 
-// Game Loop
+
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
