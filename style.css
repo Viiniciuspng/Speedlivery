@@ -9,7 +9,7 @@
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden; /* Impede a rolagem */
+    overflow: hidden; 
     background-color: #000;
     display: flex;
     justify-content: center;
@@ -73,7 +73,7 @@
     src: url('fonts/8bit.ttf') format('truetype');
   }
   
-  /* Estilo específico para textos do jogo */
+
   #scoreText {
     font-family: '8bit', sans-serif;
     font-size: 20px;
@@ -93,10 +93,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 15; /* Garantir que o texto de pausa fique acima do overlay */
+    z-index: 15; 
   }
   
-  /* Estilo para o overlay */
+
   .overlay {
     position: absolute;
     top: 0;
@@ -109,7 +109,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 10; /* Para garantir que fique acima do canvas */
+    z-index: 10; 
   }
   
   #restartButton {
@@ -131,7 +131,7 @@
     font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
-    font-family: '8bit', sans-serif; /* Opcional: aplica a mesma fonte */
+    font-family: '8bit', sans-serif; 
   }
   
   #scoreText {
@@ -227,7 +227,7 @@
     display: block;
   }
   
-  /* Estilo da overlay de fim de jogo (Cachorro te Mordeu) */
+
   #gameOverOverlay {
     position: absolute;
     top: 0;
@@ -240,7 +240,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 20; /* Coloca acima das outras overlays */
+    z-index: 20; 
   }
   
   #endMessage {
