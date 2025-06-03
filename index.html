@@ -10,25 +10,25 @@
   <div class="game-container">
     <canvas id="gameCanvas"></canvas>
 
-    <!-- Menu Inicial -->
+
     <div id="menu" class="menu">
       <img src="imagens/logo.png" alt="Logo do Jogo" id="logo">
       <button id="startButton">INICIAR</button>
       <button id="rankingButton">RANKING</button>
     </div>
 
-    <!-- Overlay de Fim de Jogo (Cachorro te Mordeu) -->
+
     <div id="gameOverOverlay" class="overlay">
       <p id="endMessage">O CACHORRO TE MORDEU!</p>
       <button id="restartButton">REINICIAR</button>
     </div>
 
-    <!-- Overlay de Pausa -->
+
     <div id="pauseOverlay" class="overlay">
       <p id="pauseText">PAUSADO</p>
     </div>
 
-    <!-- Pontuação -->
+
     <div id="scoreText"></div>
     <button id="pauseButton">⏸</button>
   </div>
@@ -36,20 +36,20 @@
   <script src="game.js"></script>
 
   <script>
-    // Ajustar o tamanho do canvas para a tela inteira
+
     const canvas = document.getElementById('gameCanvas');
     const ctx = canvas.getContext('2d');
 
-    // Função para redimensionar o canvas
+
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
 
-    // Redimensiona o canvas quando a janela for redimensionada
+
     window.addEventListener('resize', resizeCanvas);
 
-    // Chama a função para redimensionar o canvas no início
+
     resizeCanvas();
   </script>
 </body>
